@@ -19,5 +19,20 @@ namespace WordPhrase.Tests
       Assert.AreEqual(typeof(RepeatCounter), newCounter.GetType());
     }
 
+    [TestMethod]
+    public void InputChcker_ChecksForCorrectUserUnput_True()
+    {
+      // Arrange
+      string userWord = "world";
+      string userPhrase = "Hello world";
+      RepeatCounter newCounter = new RepeatCounter(userWord, userPhrase);
+      
+      // Act
+      bool correctInput = newCounter.InputChecker();
+      
+      // Assert
+      Assert.AreEqual(true, correctInput);
+    }
+
   }
 }
