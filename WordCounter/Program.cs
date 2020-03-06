@@ -15,17 +15,21 @@ namespace PhraseSet
     {
       Console.WriteLine("Your word: ");
       string userWord = Console.ReadLine();
+      RepeatCounter repeatCounter = new RepeatCounter(userWord);
+      string cleanWord = repeatCounter.PunctuationRemover(userWord);
       Console.WriteLine("Your phrase: ");
       string userPhrase = Console.ReadLine();
-      RepeatCounter repeatCounter = new RepeatCounter(userWord, userPhrase);
-      if (repeatCounter.InputChecker() == false)
+      string cleanPhrase = repeatCounter.PunctuationRemover(userPhrase);
+      RepeatCounter cleanRepeatCounter = new RepeatCounter(cleanWord, cleanPhrase);
+      if (cleanRepeatCounter.InputChecker() == false)
       {
         Console.WriteLine("You must write both a word and a phrase.");
         UserQuery();
       }
-      int result = repeatCounter.OccurrenceCounter();
-      Console.WriteLine(repeatCounter.UserWord + " occurs " + result + " times in your phrase.");
+      int result = cleanRepeatCounter.OccurrenceCounter();
+      Console.WriteLine(cleanRepeatCounter.UserWord + " occurs " + result + " times in your phrase.");
     }
+    
   }
 
 }

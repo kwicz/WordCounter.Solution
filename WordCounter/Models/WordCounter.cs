@@ -18,7 +18,7 @@ namespace WordPhrase.Models
 
     public bool InputChecker()
     {
-      if (String.IsNullOrWhiteSpace(UserWord) == true)
+      if (String.IsNullOrWhiteSpace(UserWord) == true || String.IsNullOrWhiteSpace(UserPhrase) == true)
       {
         return false;
       }
