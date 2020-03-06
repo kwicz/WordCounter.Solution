@@ -49,5 +49,19 @@ namespace WordPhrase.Tests
       Assert.AreEqual(1, occurrences);
     }
 
+        [TestMethod]
+    public void OccurrenceCounter_EnsurePartialMatchesArentCounted_Int()
+    {
+      // Arrange
+      string userWord = "cat";
+      string userPhrase = "My cat is going to the cathedral";
+      RepeatCounter newCounter = new RepeatCounter(userWord, userPhrase);
+      
+      // Act
+      int occurrences = newCounter.OccurrenceCounter();
+      
+      // Assert
+      Assert.AreEqual(1, occurrences);
+    }
   }
 }

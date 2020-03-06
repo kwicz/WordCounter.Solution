@@ -39,6 +39,5 @@ namespace WordPhrase.Models
       }
       return counter;
     }
-
   }
 }
