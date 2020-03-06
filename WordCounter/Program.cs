@@ -1,5 +1,5 @@
 using System;
-using PhraseSet.Models;
+using WordPhrase.Models;
 
 namespace PhraseSet
 {

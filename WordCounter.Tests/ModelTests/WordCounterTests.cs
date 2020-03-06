@@ -1,8 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using RepeatCounter.Models;
+using WordPhrase.Models;
 using System;
 
-namespace RepeatCounter.Tests
+namespace WordPhrase.Tests
 {
   [TestClass]
   public class Tests
@@ -16,7 +16,7 @@ namespace RepeatCounter.Tests
       RepeatCounter newCounter = new RepeatCounter(userWord, userPhrase);
 
       // Assert
-      Assert.AreEqual(typeof(RepeatCounter), newCounter.GetType();)
+      Assert.AreEqual(typeof(DateTime), newCounter.GetType());
     }
 
   }

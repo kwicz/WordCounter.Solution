@@ -1,12 +1,15 @@
 using System;
 
-namespace RepeatCounter.Models
+namespace WordPhrase.Models
 {
-  class Test
+  public class RepeatCounter
   {
-    public static void Temp()
+    public string UserWord { get; set; }
+    public string UserPhrase { get; set; }
+    public RepeatCounter(string word, string phrase)
     {
-
+      UserWord = word;
+      UserPhrase = phrase;
     }
   }
 
