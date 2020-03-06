@@ -23,7 +23,7 @@ namespace WordPhrase.Tests
     public void InputChcker_ChecksForCorrectUserUnput_True()
     {
       // Arrange
-      string userWord = "world";
+      string userWord = "";
       string userPhrase = "Hello world";
       RepeatCounter newCounter = new RepeatCounter(userWord, userPhrase);
       
