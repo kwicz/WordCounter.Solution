@@ -53,7 +53,7 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 ## Technologies Used
 
 * C#
-* .NET Core
+* MSTest
 * C# Template Generator by Dusty McCord and Patrick Kille
 
 ### License
