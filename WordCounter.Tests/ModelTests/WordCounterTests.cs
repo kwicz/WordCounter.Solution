@@ -35,7 +35,7 @@ namespace WordPhrase.Tests
     }
 
     [TestMethod]
-    public void OccurrenceCounter_CountAmountOfWordOccurances_Int()
+    public void OccurrenceCounter_CountAmountOfWordOccurences_Int()
     {
       // Arrange
       string userWord = "world";

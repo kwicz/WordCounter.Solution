@@ -26,7 +26,18 @@ namespace WordPhrase.Models
 
     public int OccurrenceCounter()
     {
-      return 1;
+      int counter = 0;
+      string word = UserWord.ToLower();
+      string phrase = UserPhrase.ToLower();
+      string[] phraseArray = UserPhrase.Split(" ");
+      foreach(string phraseItem in phraseArray)
+      {
+        if (phraseItem == word)
+        {
+          counter++;
+        }
+      }
+      return counter;
     }
 
   }
