@@ -6,9 +6,13 @@ namespace WordPhrase.Models
   {
     public string UserWord { get; set; }
     public string UserPhrase { get; set; }
-    public RepeatCounter(string word, string phrase)
+    public RepeatCounter(string word)
     {
       UserWord = word;
+    }
+    public RepeatCounter(string word, string phrase)
+      : this(word)
+    {
       UserPhrase = phrase;
     }
 
