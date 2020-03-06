@@ -26,7 +26,7 @@ namespace WordPhrase.Models
 
     public int OccurrenceCounter()
     {
-      return 0;
+      return 1;
     }
 
   }
