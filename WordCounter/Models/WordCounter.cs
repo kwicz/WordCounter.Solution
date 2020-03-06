@@ -11,6 +11,17 @@ namespace WordPhrase.Models
       UserWord = word;
       UserPhrase = phrase;
     }
-  }
 
+    public bool InputChecker()
+    {
+      if (String.IsNullOrWhiteSpace(UserWord) == true)
+      {
+        return false;
+      }
+      else
+      {
+        return true;
+      }
+    }
+  }
 }
