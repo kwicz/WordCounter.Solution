@@ -24,6 +24,10 @@ namespace WordPhrase.Models
       }
     }
 
-    public 
+    public int OccurrenceCounter()
+    {
+      return 0;
+    }
+
   }
 }

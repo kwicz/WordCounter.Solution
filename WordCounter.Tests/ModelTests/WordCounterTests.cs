@@ -43,10 +43,10 @@ namespace WordPhrase.Tests
       RepeatCounter newCounter = new RepeatCounter(userWord, userPhrase);
       
       // Act
-      int occurrences = newCounter.OccurenceCounter();
+      int occurrences = newCounter.OccurrenceCounter();
       
       // Assert
-      Assert.AreEqual(1, occurences);
+      Assert.AreEqual(1, occurrences);
     }
 
   }
