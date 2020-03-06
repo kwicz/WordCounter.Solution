@@ -35,7 +35,7 @@ namespace WordPhrase.Tests
     }
 
     [TestMethod]
-    public void OccurrenceCounter_CountAmountOfWordOccurences_Int()
+    public void OccurrenceCounter_CountNumberOfWordOccurences_Int()
     {
       // Arrange
       string userWord = "world";
@@ -49,12 +49,12 @@ namespace WordPhrase.Tests
       Assert.AreEqual(1, occurrences);
     }
 
-        [TestMethod]
+    [TestMethod]
     public void OccurrenceCounter_EnsurePartialMatchesArentCounted_Int()
     {
       // Arrange
       string userWord = "cat";
-      string userPhrase = "My cat is going to the cathedral";
+      string userPhrase = "My cat is going to the cathedral.";
       RepeatCounter newCounter = new RepeatCounter(userWord, userPhrase);
       
       // Act
@@ -62,6 +62,21 @@ namespace WordPhrase.Tests
       
       // Assert
       Assert.AreEqual(1, occurrences);
+    }
+
+    [TestMethod]
+    public void PunctuationRemover_AccountForPunctuation_String()
+    {
+      // Arrange
+      string userWord = "cat";
+      string userPhrase = "My cat, my other cat, and my dog went to the cathedral.";
+      RepeatCounter newCounter = new RepeatCounter(userWord, userPhrase);
+      
+      // Act
+      string noPunct = newCounter.PunctuationRemover(userPhrase);
+
+      // Assert
+      Assert.AreEqual("My cat  my other cat  and my dog went to the cathedral ", noPunct);
     }
   }
 }
