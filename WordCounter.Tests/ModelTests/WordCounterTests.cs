@@ -16,7 +16,7 @@ namespace WordPhrase.Tests
       RepeatCounter newCounter = new RepeatCounter(userWord, userPhrase);
 
       // Assert
-      Assert.AreEqual(typeof(DateTime), newCounter.GetType());
+      Assert.AreEqual(typeof(RepeatCounter), newCounter.GetType());
     }
 
   }
