@@ -1,6 +1,6 @@
 using System;
 
-namespace PhraseSet.Models
+namespace RepeatCounter.Models
 {
   class Test
   {

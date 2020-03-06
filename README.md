@@ -10,7 +10,7 @@
 _Word Counter gathers both a word and a phrase or sentence from a user, then returns the number of times the given word occurs within the given sentence._
 
 
-## Behavior Driven Project Specifications
+## Project Specifications
 
 | Behavior | Input | Output |
 |:---|:---:|:---:|

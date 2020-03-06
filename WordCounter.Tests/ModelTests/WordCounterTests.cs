@@ -1,16 +1,22 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PhraseSet.Models;
+using RepeatCounter.Models;
 using System;
 
-namespace PhraseSet.Tests
+namespace RepeatCounter.Tests
 {
   [TestClass]
-  public class MakeFilesTests
+  public class Tests
   {
     [TestMethod]
-    public void MethodName_WhatItDoes_ReturnObject()
+    public void RepeatCounterContructor_InstantiatesNewRepeatCounter_RepeatCouter()
     {
+      // Arrange
+      string userWord = "world";
+      string userPhrase = "Hello world";
+      RepeatCounter newCounter = new RepeatCounter(userWord, userPhrase);
 
+      // Assert
+      Assert.AreEqual(typeof(RepeatCounter), newCounter.GetType();)
     }
 
   }
