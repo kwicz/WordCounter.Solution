@@ -26,6 +26,14 @@ namespace WordPhrase.Models
 
     public string PunctuationRemover(string str)
     { 
+      int length = str.Length;
+      for(int i = 0; i < length; i++)
+      {
+        if (Char.IsPunctuation(str[i]) == true)
+        {
+          str = str.Replace(str[i], ' ');
+        }
+      }
       return str;
     }
 
