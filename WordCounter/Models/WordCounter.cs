@@ -24,6 +24,11 @@ namespace WordPhrase.Models
       }
     }
 
+    public string PunctuationRemover(string str)
+    { 
+      return str;
+    }
+
     public int OccurrenceCounter()
     {
       int counter = 0;
