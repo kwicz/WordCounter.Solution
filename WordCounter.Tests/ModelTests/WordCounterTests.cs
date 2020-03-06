@@ -20,7 +20,7 @@ namespace WordPhrase.Tests
     }
 
     [TestMethod]
-    public void InputChcker_ChecksForCorrectUserUnput_True()
+    public void InputChecker_ChecksForCorrectUserUnput_True()
     {
       // Arrange
       string userWord = "world";
@@ -32,6 +32,21 @@ namespace WordPhrase.Tests
       
       // Assert
       Assert.AreEqual(true, correctInput);
+    }
+
+    [TestMethod]
+    public void OccurrenceCounter_CountAmountOfWordOccurances_Int()
+    {
+      // Arrange
+      string userWord = "world";
+      string userPhrase = "Hello world";
+      RepeatCounter newCounter = new RepeatCounter(userWord, userPhrase);
+      
+      // Act
+      int occurrences = newCounter.OccurenceCounter();
+      
+      // Assert
+      Assert.AreEqual(1, occurences);
     }
 
   }
