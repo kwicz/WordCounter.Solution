@@ -18,7 +18,8 @@ _Word Counter gathers both a word and a phrase or sentence from a user, then ret
 |User inputs a word which doesn't occur in the inputted phrase an program returns number of occurances.|"universe", "Hello world"| 0 |
 |User inputs a word which occurs in a phrase once and program returns number of occurances. | "world", "Hello world" | 1 |
 |User inputs word that is part of another word in the phrase and program does not count it as an occurance. | "cat", "My cat is going to the cathedral"| 1 |
-|User inputs word with punctuation and results are not affected.|"My cat, my other cat, and my dog went to the cathedral."| 2 |
+|User inputs word and a phrase containing the word in a different case| "cat", "My cat Cat is going to the cathedral"| 2 |
+|User inputs contain punctuation and the punctuation is replaced with " " |"cat", "My cat, named Cat, my other cat, named Monkey, and my dog, also named Cat, went to the cathedral."| "My cat  named Cat  my other cat  named Monkey  and my dog  also named Cat  went to the cathedral " |
 
 
 ## Setup/Installation Requirements
