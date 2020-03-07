@@ -35,21 +35,6 @@ namespace WordPhrase.Tests
     }
 
     [TestMethod]
-    public void PunctuationRemover_AccountForPunctuation_String()
-    {
-      // Arrange
-      string userWord = "cat";
-      string userPhrase = "My cat, my other cat, and my dog went to the cathedral.";
-      RepeatCounter newCounter = new RepeatCounter(userWord, userPhrase);
-      
-      // Act
-      string noPunct = newCounter.PunctuationRemover(userPhrase);
-
-      // Assert
-      Assert.AreEqual("My cat  my other cat  and my dog went to the cathedral ", noPunct);
-    }
-
-    [TestMethod]
     public void OccurrenceCounter_CountNumberOfWordOccurences_Int()
     {
       // Arrange
@@ -65,7 +50,7 @@ namespace WordPhrase.Tests
     }
 
     [TestMethod]
-    public void OccurrenceCounter_EnsurePartialMatchesArentCounted_Int()
+    public void OccurrenceCounter_PartialMatchesArentCounted_Int()
     {
       // Arrange
       string userWord = "cat";
@@ -79,5 +64,34 @@ namespace WordPhrase.Tests
       Assert.AreEqual(1, occurrences);
     }
 
+    [TestMethod]
+    public void OccurrenceCounter_ResultIsCaseInsensitive_Int()
+    {
+      // Arrange
+      string userWord = "cat";
+      string userPhrase = "My cat Cat is going to the cathedral.";
+      RepeatCounter newCounter = new RepeatCounter(userWord, userPhrase);
+      
+      // Act
+      int occurrences = newCounter.OccurrenceCounter();
+      
+      // Assert
+      Assert.AreEqual(2, occurrences);
+    }
+
+    [TestMethod]
+    public void PunctuationRemover_AccountForPunctuation_String()
+    {
+      // Arrange
+      string userWord = "cat";
+      string userPhrase = "My cat, named Cat, my other cat, named Monkey, and my dog, also named Cat, went to the cathedral.";
+      RepeatCounter newCounter = new RepeatCounter(userWord, userPhrase);
+      
+      // Act
+      string noPunct = newCounter.PunctuationRemover(userPhrase);
+
+      // Assert
+      Assert.AreEqual("My cat  named Cat  my other cat  named Monkey  and my dog  also named Cat  went to the cathedral ", noPunct);
+    }
   }
 }
