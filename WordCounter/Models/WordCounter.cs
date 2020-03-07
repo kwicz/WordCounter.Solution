@@ -45,7 +45,7 @@ namespace WordPhrase.Models
       int counter = 0;
       string word = UserWord.ToLower();
       string phrase = UserPhrase.ToLower();
-      string[] phraseArray = UserPhrase.Split(" ");
+      string[] phraseArray = phrase.Split(" ");
       foreach(string phraseItem in phraseArray)
       {
         if (phraseItem == word)
