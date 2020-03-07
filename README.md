@@ -1,6 +1,6 @@
 # _Word Counter_
 
-#### _A C# Console Application that counts word occurances in a phrase, March 2020_
+#### _A C# Console Application that counts word occurrences in a phrase, March 2020_
 
 #### By _**K. Wicz**_
 

@@ -69,7 +69,7 @@ namespace WordPhrase.Tests
     {
       // Arrange
       string userWord = "cat";
-      string userPhrase = "My cat Cat is going to the cathedral.";
+      string userPhrase = "My cat Cat is going to the cathedral";
       RepeatCounter newCounter = new RepeatCounter(userWord, userPhrase);
       
       // Act
